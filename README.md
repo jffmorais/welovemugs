@@ -7,7 +7,7 @@ This is a classic ecommerce system (just for fun)
 And this is what are we building
 
 <div align="left">
-    <img src="resources/microservicesdiagram.jpg" width="400">
+    <img src="resources/microservicesdiagram.jpg" width="600">
 </div>
 
 ## System requirements
