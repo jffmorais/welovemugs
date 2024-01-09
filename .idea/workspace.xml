@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="077394ce-7d70-4abe-baaf-a44b3f19b6c9" name="Changes" comment="first microservices configuration">
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/jeffdev/product/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/jeffdev/product/domain/model/ProductEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/jeffdev/product/repositories/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/jeffdev/product/services/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/resources/db/migration/V1__create-table-product.sql" afterDir="false" />
+    <list default="true" id="077394ce-7d70-4abe-baaf-a44b3f19b6c9" name="Changes" comment="product entity and controller">
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/jeffdev/product/domain/dto/ProductRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/jeffdev/product/domain/dto/ProductResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/jeffdev/product/domain/mappers/ProductMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/jeffdev/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/jeffdev/product/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/jeffdev/product/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/jeffdev/product/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/jeffdev/product/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/jeffdev/product/services/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +23,27 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jffmorais&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="75b7a83f-a6d5-4950-94f3-343f059b9c39" />
+        <option name="url" value="https://github.com/jffmorais/welovemugs.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,7 +65,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Projetos/welovemugs/product",
+    "last_opened_file_path": "C:/Projetos/welovemugs/product/src/main/java/com/jeffdev/product/domain/model",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -62,6 +74,9 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.jeffdev" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jeffdev.product.domain.dto" />
     </key>
   </component>
   <component name="RunManager">
@@ -101,11 +116,20 @@
       <option name="project" value="LOCAL" />
       <updated>1704719830675</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="product entity and controller">
+      <option name="closed" value="true" />
+      <created>1704728064249</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704728064249</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first microservices configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="first microservices configuration" />
+    <MESSAGE value="product entity and controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="product entity and controller" />
   </component>
 </project>

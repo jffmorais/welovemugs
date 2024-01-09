@@ -1,12 +1,12 @@
 package com.jeffdev.product.controller;
 
-import com.jeffdev.product.domain.model.ProductEntity;
+import com.jeffdev.product.domain.dto.ProductRequest;
+import com.jeffdev.product.domain.dto.ProductResponse;
 import com.jeffdev.product.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,7 +18,13 @@ public class ProductController {
     ProductService productService;
 
     @GetMapping
-    public List<ProductEntity> list(Pageable pageable) {
-        return productService.listProduct(pageable).getContent();
+    public List<ProductResponse> list(Pageable pageable) {
+        return productService.listProduct(pageable);
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public ProductResponse create(@RequestBody ProductRequest productRequest){
+        return productService.createProduct(productRequest);
     }
 }
