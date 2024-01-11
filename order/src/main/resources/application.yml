@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: order
+  datasource:
+    url: 'jdbc:postgresql://localhost:5432/order'
+    username: 'welovemugsadmin'
+    password: 'password'
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'

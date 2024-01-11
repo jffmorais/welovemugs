@@ -11,6 +11,7 @@
   <url>http://maven.apache.org</url>
   <modules>
     <module>product</module>
+      <module>order</module>
   </modules>
 
   <properties>
