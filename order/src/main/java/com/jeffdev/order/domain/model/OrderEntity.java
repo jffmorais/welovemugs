@@ -5,8 +5,8 @@ import lombok.*;
 
 import java.util.List;
 
-@Table(name = "order")
-@Entity(name = "order")
+@Table(name = "tb_order")
+@Entity(name = "tb_order")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -20,6 +20,6 @@ public class OrderEntity {
     @Column(name = "order_number")
     private String orderNumber;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<OrderLineItemsEntity> orderLineItemsEntityList;
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    private List<OrderLineItemsEntity> orderLineItems;
 }

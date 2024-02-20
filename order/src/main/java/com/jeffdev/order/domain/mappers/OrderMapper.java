@@ -18,12 +18,6 @@ public class OrderMapper {
         return OrderEntity.builder()
                 .id(UUID.randomUUID().toString())
                 .orderNumber(UUID.randomUUID().toString())
-                .orderLineItemsEntityList(
-                        orderRequest.orderLineItemsRequestList()
-                                .stream()
-                                .map(this::mapToEntity)
-                                .collect(Collectors.toList())
-                )
                 .build();
     }
 
@@ -31,18 +25,20 @@ public class OrderMapper {
         return new OrderResponse(
                 orderEntity.getId(),
                 orderEntity.getOrderNumber(),
-                orderEntity.getOrderLineItemsEntityList()
+                orderEntity.getOrderLineItems()
                         .stream()
                         .map(this::mapToResponse)
                         .collect(Collectors.toList())
         );
     }
 
-    public OrderLineItemsEntity mapToEntity(OrderLineItemsRequest orderLineItemsRequest){
+    public OrderLineItemsEntity mapToEntity(OrderLineItemsRequest orderLineItemsRequest, OrderEntity orderEntity){
         return OrderLineItemsEntity.builder()
+                .id(UUID.randomUUID().toString())
                 .price(orderLineItemsRequest.price())
                 .quantity(orderLineItemsRequest.quantity())
                 .skuCode(orderLineItemsRequest.skuCode())
+                .order(orderEntity)
                 .build();
     }
 
